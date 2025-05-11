@@ -1,0 +1,17 @@
+.small-box {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 5px; /* Adds spacing if multiple boxes are used */
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-bottom: 0px;
+    position: relative;
+    top: 100px;
+}

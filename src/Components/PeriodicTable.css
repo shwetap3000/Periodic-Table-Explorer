@@ -1,0 +1,93 @@
+.periodic-table {
+    display: flex;
+    gap: 2rem;display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 3px;
+    padding: 10px;
+    float: left;
+    flex: 3;
+    margin-top: 0px;
+    border-radius: 12px;
+  }
+  
+  .container {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ffffff55;
+    border-radius: 8px;
+    color: black;
+    font-size: 14px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.5);
+
+  }
+  
+  .atomic-number {
+    font-size: 10px;
+    color: black;
+    opacity: 1;
+  }
+  
+  .f-block {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 5px;
+    padding: 5px;
+    margin-top: 4px;
+    margin-left: 0px;
+    float: left;
+  }
+  
+  .periodic-table-container {
+    display: flex;
+    gap: 2rem;
+    margin: 5px;
+    padding: 120px;
+    
+  }
+  
+  .element-details {
+    border: 2px solid #aa0de9;
+    padding: 1rem;  /* 1rem = 16px */
+    border-radius: 8px;
+    background-color: #f4eaf9;
+    width: 250px; /* Adjust as needed */
+    float: right;
+    margin-top: 0px;
+
+  }
+  
+  .element-block {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    z-index: 1; 
+    pointer-events: auto;
+    transition: transform 0.2s ease-in-out; /* Smooth animation */
+}
+
+.element-block:hover {
+    transform: scale(2.0); /* Enlarges block by 20% */
+    cursor: pointer;
+    color: rgb(247, 18, 18);
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 0px;
+  margin: 0px;
+  color: darkblue;
+}
