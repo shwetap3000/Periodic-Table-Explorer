@@ -340,6 +340,26 @@ position: relative;
   color: #c4b5fd;
 }
 
+.details-daily-uses {
+  padding: 12px 12px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(167, 139, 250, 0.05));
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.details-daily-uses .detail-label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.details-daily-uses .detail-value {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
 @keyframes overlayFadeIn {
   from {
     opacity: 0;

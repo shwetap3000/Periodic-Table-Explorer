@@ -131,9 +131,9 @@ const PeriodicTable = () => {
   );
 
   // Filter data
-  const mainElements = useMemo(() => getMainElements(elementsData), []);
-  const lanthanides = useMemo(() => getLanthanides(elementsData), []);
-  const actinides = useMemo(() => getActinides(elementsData), []);
+  const mainElements = useMemo(() => getMainElements(elementsData), [elementsData]);
+  const lanthanides = useMemo(() => getLanthanides(elementsData), [elementsData]);
+  const actinides = useMemo(() => getActinides(elementsData), [elementsData]);
 
   // Count visible
   const visibleCount = useMemo(() => {
@@ -484,6 +484,13 @@ const PeriodicTable = () => {
                 >
                   View spectral lines →
                 </a>
+              </div>
+            )}
+
+            {selectedElement.dailyUses && (
+              <div className="details-daily-uses">
+                <span className="detail-label">Daily Uses</span>
+                <p className="detail-value">{selectedElement.dailyUses}</p>
               </div>
             )}
 

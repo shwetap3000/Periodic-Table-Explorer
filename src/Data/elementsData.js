@@ -42,6 +42,7 @@ const elementsData = [
         "User:Jurii, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons, source: https://images-of-elements.com/hydrogen.php",
     },
     block: "s",
+    dailyUses: "Fuel source, water production, ammonia synthesis, semiconductor manufacturing, rocket fuel",
   },
   {
     name: "Helium",
@@ -86,6 +87,7 @@ const elementsData = [
         "Jurii, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons, source: https://images-of-elements.com/helium.php",
     },
     block: "s",
+    dailyUses: "Balloons and blimps, welding, cryogenic coolant, deep-sea diving, MRI machines",
   },
   {
     name: "Lithium",
@@ -260,6 +262,7 @@ const elementsData = [
         "Texas Lane, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons",
     },
     block: "p",
+    dailyUses: "Coal for energy, diamonds for jewelry, graphite for pencils, plastics, pharmaceuticals, electronics",
   },
   {
     name: "Nitrogen",
@@ -349,6 +352,7 @@ const elementsData = [
         "Staff Sgt. Nika Glover, U.S. Air Force, Public domain, via Wikimedia Commons",
     },
     block: "p",
+    dailyUses: "Respiration, combustion, water treatment, welding, medical oxygen therapy, steel production",
   },
   {
     name: "Fluorine",
