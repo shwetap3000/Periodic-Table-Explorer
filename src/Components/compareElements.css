@@ -1,43 +1,217 @@
+/* overall wrapper for the compare page */
 .compare-section {
   text-align: center;
   margin-top: 40px;
+  padding: 20px;
 }
 
-.compare-section select {
-  padding: 10px;
-  margin: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  cursor: pointer;
+.compare-title {
+  font-size: 2rem;
+  margin-bottom: 8px;
 }
 
-.compare-container {
+.compare-subtitle {
+  color: #888;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+/* the two dropdowns and the VS badge between them */
+.compare-selectors {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  margin-top: 25px;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.selector-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.selector-wrapper label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.compare-selectors select {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  min-width: 200px;
+  backdrop-filter: blur(8px);
+  transition: border 0.2s;
+}
+
+.compare-selectors select:focus {
+  outline: none;
+  border-color: #7c3aed;
+}
+
+/* the VS circle between the two dropdowns */
+.vs-badge {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #7c3aed;
+  padding: 10px 14px;
+  border-radius: 50%;
+  border: 2px solid #7c3aed;
+  line-height: 1;
+  margin-top: 22px;
+}
+
+/* element header cards shown above the table */
+.compare-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
 }
 
-.compare-card {
-  background: rgba(255, 255, 255, 0.1); /* slight glass effect */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 20px;
-  border-radius: 15px;
-  width: 220px;
-  backdrop-filter: blur(10px);
-  margin-bottom: 20px;
+.element-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 16px;
+  min-width: 130px;
+  opacity: 0.9;
 }
 
-.compare-card:hover {
-  transform: translateY(-5px);
+.element-symbol {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
 }
 
-.compare-card h3 {
-  margin-bottom: 10px;
+.element-name {
+  font-size: 1rem;
+  color: #ffffffcc;
+  margin-top: 4px;
 }
 
-.highlight {
-  color: green;
-  font-weight: bold;
+.element-number {
+  font-size: 0.85rem;
+  color: #ffffff99;
+  margin-top: 2px;
+}
+
+.compare-icon {
+  font-size: 2rem;
+}
+
+/* one color per block type — used for the element header badges */
+:root {
+  --color-s: #e74c3c;
+  --color-p: #2ecc71;
+  --color-d: #3498db;
+  --color-f: #9b59b6;
+}
+
+.compare-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* scrollable on smaller screens */
+.compare-table-wrapper {
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.compare-table thead tr {
+  background: rgba(124, 58, 237, 0.3);
+}
+
+.compare-table th {
+  padding: 14px 20px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.compare-table td {
+  padding: 12px 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* middle column showing the property name */
+.property-label {
+  font-weight: 600;
+  color: #aaa;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.value-cell {
+  font-weight: 500;
+}
+
+/* yellow highlight for rows where the two elements differ */
+.row-different {
+  background: rgba(234, 179, 8, 0.08);
+}
+
+.row-different .value-cell {
+  color: #f59e0b;
+  font-weight: 700;
+}
+
+.compare-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* small note below the table */
+.compare-hint {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* shown before the user selects both elements */
+.compare-placeholder {
+  margin-top: 60px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* mobile adjustments */
+@media (max-width: 600px) {
+  .compare-table th,
+  .compare-table td {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  .element-badge {
+    padding: 14px 20px;
+    min-width: 100px;
+  }
+
+  .element-symbol {
+    font-size: 2rem;
+  }
 }
