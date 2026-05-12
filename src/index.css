@@ -51,7 +51,6 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Add subtle animated grid background */
 body::before {
   content: '';
   position: fixed;
@@ -67,6 +66,102 @@ body::before {
 .app {
   min-height: 100vh;
   position: relative;
+}
+
+.app-header {
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.app-header.dark {
+  background: rgba(15, 23, 42, 0.72);
+  border-color: rgba(148, 163, 184, 0.18);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.app-header.light {
+  background: rgba(255, 255, 255, 0.82);
+  border-color: rgba(15, 23, 42, 0.08);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.app-header-title {
+  margin: 0;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.app-header-title span {
+  background: linear-gradient(135deg, #0f172a 0%, #4f46e5 55%, #7c3aed 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app-header.dark .app-header-title span {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app-header-title-icon {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
+}
+
+.app-header-subtitle {
+  margin: 0;
+  font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+  font-style: italic;
+  padding-left: clamp(8px, 2vw, 12px);
+  border-left: 2px solid rgba(79, 70, 229, 0.25);
+  line-height: 1.4;
+  color: #475569;
+  display: block;
+}
+
+.app-header.dark .app-header-subtitle {
+  border-left-color: rgba(167, 139, 250, 0.3);
+  color: #cbd5e1;
+}
+
+.app-header-quiz-button {
+  border-radius: 10px;
+  border: 1px solid rgba(79, 70, 229, 0.18);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.14), rgba(167, 139, 250, 0.18));
+  color: #312e81;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.app-header-quiz-button:hover {
+  box-shadow: 0 10px 22px rgba(79, 70, 229, 0.16);
+}
+
+.app-header.dark .app-header-quiz-button {
+  border-color: rgba(167, 139, 250, 0.35);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.22), rgba(167, 139, 250, 0.22));
+  color: #f5f3ff;
+}
+
+.app-header.dark .app-header-quiz-button:hover {
+  box-shadow: 0 10px 24px rgba(139, 92, 246, 0.2);
+}
+
+@media (max-width: 600px) {
+  .app-header-subtitle {
+    display: none;
+  }
 }
 
 /* Scrollbar styling */
@@ -91,5 +186,8 @@ body::before {
 /* Selection styling */
 ::selection {
   background: rgba(139, 92, 246, 0.3);
-  color: #f1f5f9;
+}
+
+[data-theme="dark"] ::selection {
+  background: rgba(167, 139, 250, 0.32);
 }
